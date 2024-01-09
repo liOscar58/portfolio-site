@@ -1,68 +1,419 @@
-@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800;900&display=swap');
 *{
+    font: Poppins;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, sans-serif;
+    background: black;
+    scroll-padding-top: 70px; /* height of your navbar or header */
+}
+
+html {
+    scroll-behavior: smooth;
+  
+    /* Custom cubic-bezier easing */
+    scroll-behavior: cubic-bezier(0.42, 0, 0.58, 1);
+  }
+
+/* Add styles for the logo image */
+.logo img {
+  width: 30px;
+  height: 30px;
+}
+.navbar {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    height: 40px;
+    z-index: 100; /* Set a higher z-index value */
+}
+  
+  .navbar ul {
+    list-style: none;
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
-
-}
-
-body{
-    font-family: "VT323", sans-serif;
-    height: 100%;
-    background: #2a2b32;
-
-}
-
-a{
-    color: #ccc;
+    display: flex;
+  }
+  
+  .navbar li {
+    margin: 0 15px; /* Adjust spacing as needed */
+  }
+  
+  .navbar a {
     text-decoration: none;
-    transition: 0.3s;
+    color: white;
+  }
+  
+  /* Style the links on hover (optional) */
 
-}
-
-a:hover{
-    color: #e91e63;
-}
-
-h1.header{
-    color: #e91e63;
-    font-size: 2.5rem;
-    font-weight: bold;
-}
-
-h2{
-    color: #616161;
-    font-size: 2.5rem;
-    font-weight: bold;
-}
-
-.mb{
-    margin-bottom: 3rem;
-}
-
-.logo{
-    font-family: "Poppins", cursive ;
-    color: #ccc;
-    font-size: 10rem;
-}
-
-.links-list ul li{
+  .nav-links {
     list-style: none;
-    margin-right: 2rem;
-    font-size: 1.8rem;
-    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
 }
 
-.links-list h1{
+.main .banner-container{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.main .banner-container .banner{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.main .overlay-text{
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 8rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.main .overlay-text.position{
+    position: absolute;
+    top: 52%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.about-container{
+
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+
+.about-container .header{
+    margin-top: 5rem;
+    align-self: center;
+    color: white;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 72px;
+}
+
+.about-container .about-info{
+    max-width: 80%;
+    align-self: center;
+    color: white;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 36px;
+    letter-spacing: 0.5px;
+}
+
+.about-container .item-container p{
+    width: 80px;
+    margin-top: 12px;
+    text-align: center;
+    font-size: 12px;
     color: #fff;
-    font-size: 3rem;
 }
 
-canvas{
-    height: 100vh;
-    z-index: -100000;
-    position: fixed;
-    top: 0px;
+.about-container  .items-box{
+    padding: 60px 80px;
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-column-gap: 5px;
+    grid-row-gap: 50px;
+    justify-content: space-around;
+}
+
+.about-container .items-box .item-container .item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-radius: 2.6rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(90px);
+}
+
+.about-container  .items-box .item-container .item .bx{
+    font-size: 38px;
+    color: #eee;
+}
+
+.projects{
+    margin-top: 5rem;
+    padding-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background: radial-gradient(circle, #272727 0%, #000000 100%);
+    min-height: 100vh;
+}
+
+.projects .header{
+    margin-top: 5rem;
+    color: white;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 72px;
+}
+
+.projects .projects-info{
+    max-width: 80%;
+    align-self: center;
+    color: white;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 36px;
+    letter-spacing: 0.5px;
+}
+
+.top-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+
+.top-container .info-box{
+    max-width: 40%;
+    animation: toRight 0.8s;
+}
+
+.top-container .header{
+    margin-top: -2rem;
+    color: #ccc;
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 55px;  
+}
+
+.top-container .info-text{
+    margin: 20px 0 32px;
+    color: #ccc;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+}
+
+.top-container .info-buttons{
+    display: flex;
+}
+
+.top-container .info-btn{
+    cursor: pointer;
+    padding: 8px 30px;
+    border-radius: 16px;
+    font-weight: 500;
+    font-size: 13px;    
+    letter-spacing: 0.5px;
+    color: #ccc;;
+}
+
+.top-container .info-btn.nav-btn{
+    margin-left: 20px;
+    background-color: transparent;
+    border: 1px solid#ccc;
+}
+
+.top-container .info-btn.selected{
+    border: 1px solid#ccc;
+    background: transparent
+}
+
+.top-container .logo-box{
+    max-width: 40%;
+    padding: 16px;
+    border: 1px solid #ffffff;
+    border-radius: 2rem;
+    animation: toLeft 0.8s;
+    background: linear-gradient(#272727, #000000);
+
+}
+
+.top-container .bot-logo{
+    object-fit: cover;
+    width: 300px;
+    height: 300px;
+    border-radius: 1.6rem;
+    
+}
+
+.contact-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contact-container .header{
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    color: white;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 72px;
+}
+
+.contact-container .contact-btn {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto; 
+}
+
+.contact-container .contact-btn button {
+    flex: 1 1 auto; 
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    border: #ccc 1px solid;
+    font-size: 20px;
+    color: #ccc;
+    font-weight: 400;
+    background-color: transparent;
+
+}
+
+.contact-container .contact-btn button:hover {
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
+
+}
+
+footer{
+    background-color: #000000;
+    padding: 85px;
+    display: flex;
+    flex-direction: column;
+}
+
+footer .top,
+footer .bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .bx, footer .logo{
+    color: white;
+}
+
+footer .top .social-links{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+    color: #ccc;
+}
+
+footer .separator{
+    width: 100%;
+    height: 1px;
+    background-color: #ffffff;
+    margin: 30px 0 20px;
+}
+
+footer .bottom p{
+    font-size: 12px;
+    color: #ccc;
+}
+
+footer .bottom .links a{
+    font-size: 12px;
+    margin-left: 14px;
+}
+
+.linkedin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust as needed */
+}
+
+.linkedin .badge-base{
+    align-self: center ;
+}
+
+@media screen and (max-width: 925px) {
+    .main .overlay-text{
+        font-size: 50px;
+    }
+    .main .overlay-text.position{
+        font-size: 12px;
+        margin-top: 5px;
+    }
+
+    .about-container .header{
+        font-size: 30px;
+    }
+    .about-container .about-info{
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .projects .header{
+        font-size: 30px;
+    }
+
+    .projects .projects-info{
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .projects .top-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .projects .top-container .header{
+        font-size: 20px;
+    }
+
+    .projects .top-container .info-text{
+        font-size: 12px;
+        line-height: 20px;
+        max-width: 90%;
+    }
+
+    .projects .top-container .logo-box{
+        max-height: 200px;
+        max-width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .projects .top-container .bot-logo{
+        width: 200px;
+        height: 200px;
+        align-self: center;
+    }
+
+    .projects  .top-container .info-buttons .info-btn.selected{
+        font-size: 10px;
+    }
+    .projects  .top-container .info-buttons .info-btn.nav-btn{
+        font-size: 10px;
+    }
+
+
 }
