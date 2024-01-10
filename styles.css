@@ -155,6 +155,8 @@ html {
 }
 
 .projects{
+    padding-left: 40px;
+    padding-right: 40px;
     margin-top: 5rem;
     padding-bottom: 5rem;
     display: flex;
@@ -174,7 +176,8 @@ html {
 }
 
 .projects .projects-info{
-    max-width: 80%;
+    text-align: center;
+    max-width: 50%;
     align-self: center;
     color: white;
     font-weight: 400;
@@ -228,6 +231,14 @@ html {
 
 .top-container .info-btn.nav-btn{
     margin-left: 20px;
+    background-color: transparent;
+    border: 1px solid#ccc;
+}
+
+.top-container .info-btn.other{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: transparent;
     border: 1px solid#ccc;
 }
