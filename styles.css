@@ -177,7 +177,7 @@ html {
 
 .projects .projects-info{
     text-align: center;
-    max-width: 50%;
+    max-width: 80%;
     align-self: center;
     color: white;
     font-weight: 400;
@@ -452,6 +452,11 @@ footer .bottom .links a{
         font-size: 0.8rem;
         top: 52%;
 
+    }
+
+    .projects .top-container{
+        padding-left: 40px;
+        padding-right: 40px;
     }
     
     
