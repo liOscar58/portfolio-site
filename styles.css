@@ -456,12 +456,9 @@ footer .bottom .links a{
     }
 
     .projects .top-container{
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-    .top-container .info-box{
         flex-direction: column;
     }
+
     
     
 }
