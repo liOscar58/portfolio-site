@@ -194,7 +194,6 @@ html {
 
 .top-container .info-box{
     max-width: 40%;
-    animation: toRight 0.8s;
 }
 
 .top-container .header{
@@ -457,8 +456,31 @@ footer .bottom .links a{
 
     .projects .top-container{
         flex-direction: column;
+        max-width: 80%;
+        align-items: center;
+    }
+    .top-container .info-box{
+        max-width: 80%;
+
     }
 
+    .top-container .info-text{
+        font-size: 12px;
+        line-height: 20px;
+        text-align: center;
+    } 
+    .top-container .header{
+        text-align: center;
+    }
+    .top-container .logo-box{
+        margin-top: 2rem;
+    }  
+
+    .top-container .info-buttons {
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    }
     
     
 }
