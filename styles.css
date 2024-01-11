@@ -155,8 +155,6 @@ html {
 }
 
 .projects{
-    padding-left: 40px;
-    padding-right: 40px;
     margin-top: 5rem;
     padding-bottom: 5rem;
     display: flex;
@@ -374,6 +372,9 @@ footer .bottom .links a{
         font-size: 1rem;
         top:50%;
     }
+    .top-container .info-box{
+        flex-direction: column;
+    }
     
 }
 
@@ -457,6 +458,9 @@ footer .bottom .links a{
     .projects .top-container{
         padding-left: 40px;
         padding-right: 40px;
+    }
+    .top-container .info-box{
+        flex-direction: column;
     }
     
     
